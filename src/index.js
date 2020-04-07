@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components';
 import Container from 'components/container';
-import Stepper from 'components/stepper';
+import TestWrapper from 'components/test-wrapper';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -16,7 +16,7 @@ ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
     <Container>
-      <Stepper />
+      <TestWrapper />
     </Container>
   </React.StrictMode>,
   document.getElementById('root')

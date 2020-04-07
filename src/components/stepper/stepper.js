@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Question from 'components/question';
 import Counter from 'components/counter';
-import data from 'data/questions.json';
 
 const GridArea = styled.form`
   display: grid;
@@ -48,42 +47,44 @@ const NextButton = styled(Button)`
 
 const FinalizeButton = styled(NextButton)``;
 
-const Stepper = () => {
+const Stepper = ({ questions, onCompleteTest }) => {
   const [current, setCurrent] = useState(0);
   const [cacheAnswers, setCacheAnswers] = useState({});
 
   const handleChange = (event) => {
     setCacheAnswers({
       ...cacheAnswers,
-      [data.questions[current].id]: event.target.value,
+      [questions[current].id]: event.target.value,
     });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log({ cacheAnswers });
+    onCompleteTest(cacheAnswers);
   };
 
   return (
     <GridArea onSubmit={handleSubmit}>
       <CounterSection>
-        <Counter current={current + 1} limit={data.questions.length} />
+        <Counter current={current + 1} limit={questions.length} />
       </CounterSection>
+
       <Question
-        text={data.questions[current].text}
-        id={data.questions[current].id}
-        answers={data.questions[current].answers}
+        text={questions[current].text}
+        id={questions[current].id}
+        answers={questions[current].answers}
         onChange={handleChange}
-        cacheChecked={cacheAnswers[data.questions[current].id]}
+        cacheChecked={cacheAnswers[questions[current].id]}
       />
+
       <ButtonsSection>
         {current > 0 && (
           <PrevButton type="button" onClick={() => setCurrent(current - 1)}>
             Previous
           </PrevButton>
         )}
-        {current !== data.questions.length - 1 ? (
+
+        {current !== questions.length - 1 ? (
           <NextButton type="button" onClick={() => setCurrent(current + 1)}>
             Next
           </NextButton>
