@@ -1,0 +1,50 @@
+{
+  "questions": [
+    {
+      "id": "one",
+      "text": "Is this the First Question or not, what do you think?",
+      "correctAnswerId": "b",
+      "answers": [
+        {
+          "id": "a",
+          "text": "This is a option"
+        },
+        {
+          "id": "b",
+          "text": "This is b option"
+        },
+        {
+          "id": "c",
+          "text": "This is c option"
+        },
+        {
+          "id": "d",
+          "text": "This is d option"
+        }
+      ]
+    },
+    {
+      "id": "two",
+      "text": "Second Question?",
+      "correctAnswerId": "b",
+      "answers": [
+        {
+          "id": "a",
+          "text": "This is a option"
+        },
+        {
+          "id": "b",
+          "text": "This is b option"
+        },
+        {
+          "id": "c",
+          "text": "This is c option"
+        },
+        {
+          "id": "d",
+          "text": "This is d option"
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createGlobalStyle } from 'styled-components';
+import Container from 'components/container';
+import Stepper from 'components/stepper';
+
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+`;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalStyle />
+    <Container>
+      <Stepper />
+    </Container>
   </React.StrictMode>,
   document.getElementById('root')
 );
