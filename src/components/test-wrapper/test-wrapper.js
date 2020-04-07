@@ -7,6 +7,7 @@ import Start from 'components/start';
 /**
  * @todo Set limit time to answer the test
  */
+
 const TestWrapper = () => {
   const [phase, setPhase] = useState(0);
   const [answers, setAnswers] = useState({});

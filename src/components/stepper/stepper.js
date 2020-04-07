@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Question from 'components/question';
 import Counter from 'components/counter';
+import Timer from 'components/timer';
+
+const LIMIT_TIME = 1000 * 60; // 1 minute
 
 const GridArea = styled.form`
   display: grid;
@@ -10,10 +13,10 @@ const GridArea = styled.form`
   height: 100%;
 `;
 
-const CounterSection = styled.div`
+const SettingsSection = styled.div`
   display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
 
 const ButtonsSection = styled.div`
@@ -48,8 +51,23 @@ const NextButton = styled(Button)`
 const FinalizeButton = styled(NextButton)``;
 
 const Stepper = ({ questions, onCompleteTest }) => {
+  const [timeLeft, setTimeLeft] = useState(LIMIT_TIME / 1000);
   const [current, setCurrent] = useState(0);
   const [cacheAnswers, setCacheAnswers] = useState({});
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onCompleteTest(cacheAnswers);
+    }, LIMIT_TIME);
+    const timing = setInterval(() => {
+      setTimeLeft((timeLeft) => timeLeft - 1);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(timing);
+    };
+  }, [cacheAnswers, onCompleteTest]);
 
   const handleChange = (event) => {
     setCacheAnswers({
@@ -65,9 +83,10 @@ const Stepper = ({ questions, onCompleteTest }) => {
 
   return (
     <GridArea onSubmit={handleSubmit}>
-      <CounterSection>
+      <SettingsSection>
+        <Timer seconds={timeLeft} />
         <Counter current={current + 1} limit={questions.length} />
-      </CounterSection>
+      </SettingsSection>
 
       <Question
         text={questions[current].text}
