@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-AxjAm iWCLJP"
+>
+  <h1
+    className="sc-AxirZ fzdAyF"
+  >
+    Welcome!
+  </h1>
+  <p
+    className="sc-AxiKw bOTXee"
+  >
+    This test has 
+    5
+     questions to answer
+  </p>
+  <button
+    className="sc-AxhCb hJTwHZ"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    Start
+  </button>
+</div>
+`;
