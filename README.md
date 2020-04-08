@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Github Url:
+
+To play with this mini project you can visit:
+
+- https://jonnitg.github.io/answers-and-questions/
+
+## How to use?
+
+You will need to change the `questions.json` file located ton `src/data/questions.json`
+
 ## Available Scripts
 
 In the project directory, you can run:
