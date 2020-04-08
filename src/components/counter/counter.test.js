@@ -1,7 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import Counter from './counter';
+
+afterAll(cleanup);
 
 it('renders counter correctly', () => {
   const { getByText } = render(<Counter limit={20} current={5} />);
