@@ -1,23 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import { createGlobalStyle } from 'styled-components';
-import Container from 'components/container';
 import TestWrapper from 'components/test-wrapper';
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-`;
+import data from 'data/questions.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <Container>
-      <TestWrapper />
-    </Container>
+    <TestWrapper questions={data.questions} />
   </React.StrictMode>,
   document.getElementById('root')
 );
