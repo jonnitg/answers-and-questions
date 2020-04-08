@@ -8,7 +8,7 @@ To play with this mini project you can visit:
 
 ## How to use?
 
-You will need to change the `questions.json` file located ton `src/data/questions.json`
+You will need to change the `questions.json` file with your own questions, the file located on `src/data/questions.json`
 
 ## Available Scripts
 
