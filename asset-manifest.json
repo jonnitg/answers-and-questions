@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/answers-and-questions/static/js/main.fe8a7350.chunk.js",
+    "main.js.map": "/answers-and-questions/static/js/main.fe8a7350.chunk.js.map",
+    "runtime-main.js": "/answers-and-questions/static/js/runtime-main.b79a6c7c.js",
+    "runtime-main.js.map": "/answers-and-questions/static/js/runtime-main.b79a6c7c.js.map",
+    "static/js/2.a8933c07.chunk.js": "/answers-and-questions/static/js/2.a8933c07.chunk.js",
+    "static/js/2.a8933c07.chunk.js.map": "/answers-and-questions/static/js/2.a8933c07.chunk.js.map",
+    "index.html": "/answers-and-questions/index.html",
+    "precache-manifest.4175a37ad23a63388b936bd251ac0374.js": "/answers-and-questions/precache-manifest.4175a37ad23a63388b936bd251ac0374.js",
+    "service-worker.js": "/answers-and-questions/service-worker.js",
+    "static/js/2.a8933c07.chunk.js.LICENSE.txt": "/answers-and-questions/static/js/2.a8933c07.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b79a6c7c.js",
+    "static/js/2.a8933c07.chunk.js",
+    "static/js/main.fe8a7350.chunk.js"
+  ]
+}
