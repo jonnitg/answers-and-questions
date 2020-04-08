@@ -1,11 +1,12 @@
 {
   "name": "questions-and-answers",
   "version": "0.1.0",
-  "homepage": "https://jonnitg.github.io/answers-and-questions/",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -19,6 +20,7 @@
     "test": "react-scripts test",
     "test:coverage": "npm run test -- --coverage --watchAll=false"
   },
+  "homepage": "https://jonnitg.github.io/answers-and-questions/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -35,7 +37,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
     "react-test-renderer": "^16.13.1"
   }
 }
