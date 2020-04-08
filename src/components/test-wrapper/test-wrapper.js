@@ -4,6 +4,13 @@ import Stepper from 'components/stepper';
 import Score from 'components/score';
 import Start from 'components/start';
 
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+`;
+
 const DivContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -17,13 +24,6 @@ const Wrapper = styled.div`
   justify-items: center;
   width: 100vw;
   height: 100vh;
-`;
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
 `;
 
 const TestWrapper = ({ questions }) => {
