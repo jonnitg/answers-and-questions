@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Loading from 'components/loading';
+import { getCorrectAnswers } from './helper';
 
 const ScoreContainer = styled.div`
   display: flex;
@@ -36,17 +37,8 @@ const Score = ({ questions, answers, resetPhases }) => {
   const [totalScore, setTotalScore] = useState(0);
 
   useEffect(() => {
-    let tempScore = 0;
-    for (const question of questions) {
-      const isCorrect = answers[question.id] === question.correctAnswerId;
-
-      if (isCorrect) {
-        tempScore++;
-      }
-    }
-
     setLoading(false);
-    setTotalScore(tempScore);
+    setTotalScore(getCorrectAnswers(questions, answers));
   }, [answers, questions]);
 
   if (loading) {
